@@ -102,7 +102,7 @@ class ExpirationDateValidator
     protected function isFeatureDate()
     {
         return Carbon::now()->startOfDay()->lte(
-            Carbon::createFromFormat('Y-m', $this->year.'-'.$this->month())->endOfDay()
+            Carbon::createFromFormat('Y-m', $this->year.'-'.$this->month())->endOfMonth()
         );
     }
 }
